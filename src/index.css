@@ -113,7 +113,7 @@
   .menu {
     margin: 2.5em 4em 4em;
   }
-  .menu > a {
+  .menu > .menuItem {
     @apply bg-dark font-oswald font-bold hover:text-primary hover:scale-105;
     color: white;
     width: 150px;
@@ -126,24 +126,24 @@
     text-decoration: none;
   }
  
-  .menu > a:last-child {
+  .menu > .menuItem:last-child {
     transform: translateY(-2em);
 
     transition: transform 300ms 0ms, opacity 300ms ease-in;
   }
-  .menu > a:nth-child(4) {
+  .menu > .menuItem:nth-child(4) {
     transform: translateY(-2.5em);
     transition: transform 300ms 150ms, opacity 300ms ease-in;
   }
-  .menu > a:nth-child(3) {
+  .menu > .menuItem:nth-child(3) {
     transform: translateY(-3em);
     transition: transform 300ms 200ms, opacity 300ms ease-in;
   }
-  .menu > a:nth-child(2) {
+  .menu > .menuItem:nth-child(2) {
     transform: translateY(-3.5em);
     transition: transform 300ms 250ms, opacity 300ms ease-in;
   }
-  .menu > a:first-child {
+  .menu > .menuItem:first-child {
     transform: translateY(-4em);
     transition: opacity 300ms 400ms ease-in;
   }
@@ -151,7 +151,7 @@
     margin: 2.5em 4em;
     z-index: 0;
   }
-  .hideMenu > a {
+  .hideMenu > .menuItem {
     background-color: #53525e;
     color: white;
     width: 150px;
@@ -163,23 +163,23 @@
     opacity: 0;
     border-radius: 8pt;
   }
-  .hideMenu > a:last-child {
+  .hideMenu > .menuItem:last-child {
     transform: translateY(14em);
     transition: transform 300ms 0ms, opacity 300ms ease-in;
   }
-  .hideMenu > a:nth-child(4) {
+  .hideMenu > .menuItem:nth-child(4) {
     transform: translateY(13.5em);
     transition: transform 300ms 50ms, opacity 300ms ease-in;
   }
-  .hideMenu > a:nth-child(3) {
+  .hideMenu > .menuItem:nth-child(3) {
     transform: translateY(13em);
     transition: transform 300ms 100ms, opacity 300ms ease-in;
   }
-  .hideMenu > a:nth-child(2) {
+  .hideMenu > .menuItem:nth-child(2) {
     transform: translateY(12.5em);
     transition: transform 300ms 150ms, opacity 300ms ease-in;
   }
-  .hideMenu > a:first-child {
+  .hideMenu > .menuItem:first-child {
     transform: translateY(14em);
     transition: opacity 300ms 200ms ease-in;
   }

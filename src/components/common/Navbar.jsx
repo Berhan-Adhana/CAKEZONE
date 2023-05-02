@@ -71,9 +71,9 @@ const Navbar = () => {
       {/* Mobile and Tablet */}
       <nav className={`${isMenuOpened ? "menu" : "hideMenu"} }  lg:hidden`}>
         {menuLinks.map((menu, index) => (
-          <a key={index} href={menu.linkTo}>
+          <NavLink key={index} to={menu.linkTo} className="menuItem">
             {menu.name}
-          </a>
+          </NavLink>
         ))}
       </nav>
 
