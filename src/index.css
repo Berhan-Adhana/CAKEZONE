@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Pacifico&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-openSans transition-all duration-300 overflow-x-hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-bold;
+  }
+  h4 {
+    @apply text-[calc(1.275rem+.3vw)];
+  }
+  h1,
+  h2 {
+    @apply text-dark;
+  }
+
+  h1 {
+    @apply text-[calc(1.425rem+2.1vw)];
+  }
+
+  h3,
+  h4 {
+    @apply font-semibold text-[calc(1.275rem+.3vw)];
+  }
+}
+@layer components {
+  .border-inner {
+    @apply before:absolute before:border-[1px] before:border-white  before:content-[''] before:top-2 before:left-2 before:right-2 before:bottom-2;
+  }
+  .section {
+    @apply w-full px-6 md:px-10 lg:px-[65px] mt-12;
+  }
+  .common-bg {
+    background-image: url(./assets/img/bg.jpg);
+  }
+  .hero-bg {
+    background-image: url(./assets/img/hero.jpg);
+  }
+  .btn-play {
+    position: relative;
+    display: block;
+    box-sizing: content-box;
+    width: 16px;
+    height: 26px;
+    border-radius: 100%;
+    border: none;
+    outline: none !important;
+    padding: 18px 20px 20px 28px;
+    background: #ffffff;
+  }
+
+  .btn-play:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #e88f2a;
+    border-radius: 100%;
+    animation: pulse-border 1500ms ease-out infinite;
+  }
+
+  .btn-play:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 100%;
+    transition: all 200ms;
+  }
+
+  @keyframes pulse-border {
+    0% {
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(2);
+      opacity: 0;
+    }
+  }
+
+  .menu,
+  .hideMenu {
+    position: fixed;
+    bottom: 0;
+    z-index: 99999;
+    display: flex;
+    flex-flow: column;
+  }
+  .menu {
+    margin: 2.5em 4em 4em;
+  }
+  .menu > a {
+    @apply bg-dark font-oswald font-bold hover:text-primary hover:scale-105;
+    color: white;
+    width: 150px;
+    padding: 0.5em;
+    text-align: center;
+    transform: translateY(-2.5em);
+    transition: transform 400ms 0ms, opacity 400ms ease-out;
+    opacity: 1;
+    border-radius: 8pt;
+    text-decoration: none;
+  }
+ 
+  .menu > a:last-child {
+    transform: translateY(-2em);
+
+    transition: transform 300ms 0ms, opacity 300ms ease-in;
+  }
+  .menu > a:nth-child(4) {
+    transform: translateY(-2.5em);
+    transition: transform 300ms 150ms, opacity 300ms ease-in;
+  }
+  .menu > a:nth-child(3) {
+    transform: translateY(-3em);
+    transition: transform 300ms 200ms, opacity 300ms ease-in;
+  }
+  .menu > a:nth-child(2) {
+    transform: translateY(-3.5em);
+    transition: transform 300ms 250ms, opacity 300ms ease-in;
+  }
+  .menu > a:first-child {
+    transform: translateY(-4em);
+    transition: opacity 300ms 400ms ease-in;
+  }
+  .hideMenu {
+    margin: 2.5em 4em;
+    z-index: 0;
+  }
+  .hideMenu > a {
+    background-color: #53525e;
+    color: white;
+    width: 150px;
+    padding: 0.5em;
+    text-align: center;
+    visibility: none;
+    transform: translateY(14em);
+    transition: transform 400ms 0ms, opacity 400ms ease-in;
+    opacity: 0;
+    border-radius: 8pt;
+  }
+  .hideMenu > a:last-child {
+    transform: translateY(14em);
+    transition: transform 300ms 0ms, opacity 300ms ease-in;
+  }
+  .hideMenu > a:nth-child(4) {
+    transform: translateY(13.5em);
+    transition: transform 300ms 50ms, opacity 300ms ease-in;
+  }
+  .hideMenu > a:nth-child(3) {
+    transform: translateY(13em);
+    transition: transform 300ms 100ms, opacity 300ms ease-in;
+  }
+  .hideMenu > a:nth-child(2) {
+    transform: translateY(12.5em);
+    transition: transform 300ms 150ms, opacity 300ms ease-in;
+  }
+  .hideMenu > a:first-child {
+    transform: translateY(14em);
+    transition: opacity 300ms 200ms ease-in;
+  }
+
+  .btn {
+    @apply py-4 px-12 text-white font-oswald font-bold relative before:absolute before:border-[1px] before:border-white  before:content-[''] before:top-2 before:left-2 before:right-2 before:bottom-2 transition-all duration-500;
+  }
+  .btn-primary {
+    @apply bg-primary hover:text-black;
+  }
+  .btn-dark {
+    @apply bg-dark hover:text-primary;
+  }
+  .btn:hover {
+    @apply scale-105 rounded-md;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+}
