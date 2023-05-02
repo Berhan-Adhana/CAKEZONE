@@ -1,5 +1,5 @@
 import NameBanner from "../components/common/NameBanner";
-import Teams from "../components/Teams";
+import Teams from "../components/team/Teams";
 
 const MasterChef = () => {
   return (

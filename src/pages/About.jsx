@@ -1,6 +1,6 @@
-import AboutUs from "../components/AboutUs";
+import AboutUs from "../components/about/AboutUs";
 import NameBanner from "../components/common/NameBanner";
-import Stats from "../components/Stats";
+import Stats from "../components/stat/Stats";
 
 const About = () => {
   return (

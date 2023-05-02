@@ -3,7 +3,7 @@ import { MdLocationOn } from "react-icons/md";
 import { AiOutlineMail } from "react-icons/ai";
 import NameBanner from "../components/common/NameBanner";
 import { BsPhoneVibrate } from "react-icons/bs";
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/contact/ContactForm";
 
 const Contacts = () => {
   const contactInfo = [

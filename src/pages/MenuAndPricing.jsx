@@ -1,5 +1,5 @@
 import NameBanner from "../components/common/NameBanner";
-import Special from "../components/Special";
+import Special from "../components/special/Special";
 
 const MenuAndPricing = () => {
   return (
