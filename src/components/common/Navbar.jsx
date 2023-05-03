@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
+
 const Navbar = () => {
   const [isTop, setIsTop] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -51,7 +52,7 @@ const Navbar = () => {
   ];
 
   return (
-    <>
+    <div>
       {/* Desktop */}
       <nav
         className={`hidden bg-dark lg:flex items-center gap-x-5 justify-center transition-[height] duration-500 ${
@@ -83,7 +84,7 @@ const Navbar = () => {
       >
         <FaBars size={30} className="text-white " />
       </div>
-    </>
+    </div>
   );
 };
 

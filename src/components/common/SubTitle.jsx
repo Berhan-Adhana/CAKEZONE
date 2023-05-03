@@ -1,9 +1,17 @@
-// eslint-disable-next-line react/prop-types
+/* eslint-disable react/prop-types */
+import { motion } from "framer-motion";
+
 const SubTitle = ({ subtitle }) => {
   return (
-    <h2 className="text-primary font-pacifico text-[calc(1.325rem+.9vw)] text-center">
+    <motion.h2
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="text-primary font-pacifico text-[calc(1.325rem+.9vw)] text-center"
+    >
       {subtitle}
-    </h2>
+    </motion.h2>
   );
 };
 `1`;

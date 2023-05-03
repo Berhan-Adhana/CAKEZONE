@@ -6,11 +6,12 @@ import Teams from "../components/team/Teams";
 import Special from "../components/special/Special";
 import Hero from "../components/hero/Hero";
 import Testimonial from "../components/testimonial/Testimonial";
+import Transitions from "../components/common/Tranisitions";
 // import { useState } from "react";
 
 const Home = () => {
   return (
-    <div>
+    <Transitions>
       {/* Hero */}
       <Hero />
       {/* about us */}
@@ -27,7 +28,7 @@ const Home = () => {
       <Special />
       {/* Testimonial */}
       <Testimonial />
-    </div>
+    </Transitions>
   );
 };
 

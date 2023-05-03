@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -6,28 +6,20 @@ import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Banner from "./components/common/Banner";
 import Error from "./pages/Error";
-import Aos from "aos";
 import ScrollTop from "./components/common/ScrollTop";
-
-const Home = React.lazy(() => import("./pages/Home"));
-const About = React.lazy(() => import("./pages/About"));
-const MasterChef = React.lazy(() => import("./pages/MasterChef"));
-const MenuAndPricing = React.lazy(() => import("./pages/MenuAndPricing"));
-const Contacts = React.lazy(() => import("./pages/Contacts"));
+import { About, Contacts, Home, MasterChef, MenuAndPricing } from "./pages";
 
 export const Dashboard = () => {
   // Initialize the animation library
-  useEffect(() => {
-    Aos.init();
-  }, []);
+  useEffect(() => {}, []);
   return (
-    <>
+    <div className="">
       <Banner />
       <Navbar />
       <Outlet />
       <Footer />
       <ScrollTop />
-    </>
+    </div>
   );
 };
 const router = createBrowserRouter([
@@ -62,8 +54,6 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Suspense fallback={<div>Loading...</div>}>
-      <RouterProvider router={router} />
-    </Suspense>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

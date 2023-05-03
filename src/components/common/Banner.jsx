@@ -4,6 +4,8 @@ import { BsPhoneVibrate } from "react-icons/bs";
 
 const Banner = () => {
   return (
+   
+
     <div className="hidden h-[70px] gap-x-[5rem] lg:flex items-center justify-between bg-white w-full px-[65px]">
       {/* 1 */}
       <div className="flex items-center gap-x-4">
@@ -36,6 +38,7 @@ const Banner = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

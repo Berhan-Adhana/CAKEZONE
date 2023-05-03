@@ -1,20 +1,24 @@
+import { motion } from "framer-motion";
 import SubTitle from "./SubTitle";
 import Title from "./Title";
 import TitleDecoration from "./TitleDecoration";
 
-
-
 // eslint-disable-next-line react/prop-types
-const SectionTitle = ({ subTitle, title,isWhite }) => {
+const SectionTitle = ({ subTitle, title, isWhite }) => {
   return (
-    <div>
-      
+    <div className="py-5">
       <SubTitle subtitle={subTitle} />
       {/* section Title */}
-      <div className="flex items-center flex-col justify-center">
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 2 }}
+        viewport={{ once: true }}
+        className="flex items-center flex-col justify-center"
+      >
         <Title title={title} isWhite={isWhite} />
         <TitleDecoration />
-      </div>
+      </motion.div>
     </div>
   );
 };

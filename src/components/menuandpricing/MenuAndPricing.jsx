@@ -137,9 +137,9 @@ const MenuAndPricing = () => {
     },
   ];
   return (
-    <section className="section">
-      <div className="flex flex-col items-center">
+    <section className="section overflow-x-hidden">
         <SectionTitle subTitle="Menu & Pricing" title="EXPLORE OUR CAKES" />
+      <div className="flex flex-col items-center">
         <div className="bg-dark relative border-inner py-8 flex gap-x-6 justify-center px-12 mt-12">
           <button
             className={`text-white uppercase cursor-pointer z-[999] p-2 ${

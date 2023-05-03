@@ -33,6 +33,16 @@
   h4 {
     @apply font-semibold text-[calc(1.275rem+.3vw)];
   }
+  ::-webkit-scrollbar-track {
+    @apply bg-dark;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-md;
+  }
+
+  ::-webkit-scrollbar {
+    @apply sm:w-0 md:w-[10px];
+  }
 }
 @layer components {
   .border-inner {
@@ -125,7 +135,7 @@
     border-radius: 8pt;
     text-decoration: none;
   }
- 
+
   .menu > .menuItem:last-child {
     transform: translateY(-2em);
 
