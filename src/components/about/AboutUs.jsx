@@ -1,10 +1,8 @@
-
 import SectionTitle from "../common/SectionTitle.jsx";
-import aboutImg from "../../assets/img/about.jpg";
+import aboutImg from "/img/about.jpg";
 import { aboutData } from "../../utils/constants.js";
 
 const AboutUs = () => {
- 
   return (
     <section className="section overflow-x-hidden">
       <SectionTitle subTitle="about us" title="Welcome To CakeZone" />
