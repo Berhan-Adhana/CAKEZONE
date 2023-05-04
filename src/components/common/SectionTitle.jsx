@@ -6,7 +6,7 @@ import TitleDecoration from "./TitleDecoration";
 // eslint-disable-next-line react/prop-types
 const SectionTitle = ({ subTitle, title, isWhite }) => {
   return (
-    <div className="py-5">
+    <div className="py-5 overflow-x-hidden">
       <SubTitle subtitle={subTitle} />
       {/* section Title */}
       <motion.div

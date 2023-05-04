@@ -16,7 +16,7 @@ const AboutUs = () => {
     },
   ];
   return (
-    <section className="section">
+    <section className="section overflow-x-hidden">
       <SectionTitle subTitle="about us" title="Welcome To CakeZone" />
       <div className="flex justify-between gap-x-12 mt-12 flex-col lg:flex-row gap-y-8 pb-12">
         {/* about image */}
