@@ -4,33 +4,9 @@ import { IoLocationSharp } from "react-icons/io5";
 import { IoMailOpenOutline } from "react-icons/io5";
 import SocialMedia from "./SocialMedia";
 import { NavLink } from "react-router-dom";
+import { footerLinks } from "../../utils/constants";
 const Footer = () => {
-  const footerLinks = [
-    {
-      name: "Home",
-      linkTo: "/",
-    },
-    {
-      name: "ABout Us",
-      linkTo: "/about",
-    },
-    {
-      name: "Our Services",
-      linkTo: "/services",
-    },
-    {
-      name: "Meet the team",
-      linkTo: "/teams",
-    },
-    {
-      name: "Latest blog",
-      linkTo: "/blogs",
-    },
-    {
-      name: "Contact Us",
-      linkTo: "/contact",
-    },
-  ];
+  
   return (
     <footer className="section common-bg">
       <div className="flex flex-col md:flex-row justify-between gap-x-8 items-center lg:items-start">

@@ -1,31 +1,9 @@
-import { FaCheck, FaStar } from "react-icons/fa";
-import { GiCoffeeCup } from "react-icons/gi";
-import { MdGroups2 } from "react-icons/md";
+
+import { statData } from "../../utils/constants";
 import { Counter } from "./Counter";
 
 const Stats = () => {
-  const statData = [
-    {
-      icon: FaStar,
-      title: "OUR EXPERIENCE",
-      numbers: 12345,
-    },
-    {
-      icon: MdGroups2,
-      title: "CAKE SPECIALIST",
-      numbers: 12345,
-    },
-    {
-      icon: FaCheck,
-      title: "COMPLETE PROJECT",
-      numbers: 12345,
-    },
-    {
-      icon: GiCoffeeCup,
-      title: "HAPPY CLIENTS",
-      numbers: 12345,
-    },
-  ];
+  
   return (
     <section className="bg-transparent common-bg py-5 mb-[80px]">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-5 px-[65px]">

@@ -1,20 +1,8 @@
 import { BsArrowRightShort } from "react-icons/bs";
+import { discounts } from "../../utils/constants";
 
 const Discounts = () => {
-  const discounts = [
-    {
-      name: "BIRTHDAY CAKE",
-      desc: "Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo amet tempor amet kasd lorem dolor ipsum",
-    },
-    {
-      name: "WEDDING CAKE",
-      desc: "Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo amet tempor amet kasd lorem dolor ipsum",
-    },
-    {
-      name: "CUSTOM CAKE",
-      desc: "Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo amet tempor amet kasd lorem dolor ipsum",
-    },
-  ];
+ 
   return (
     <section className="common-bg mt-[200px]">
       <div className="section">
