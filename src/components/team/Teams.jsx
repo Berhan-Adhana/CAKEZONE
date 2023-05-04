@@ -1,26 +1,9 @@
+import { teams } from "../../utils/constants";
 import SectionTitle from "../common/SectionTitle";
-import team1 from "../../assets/img/team-1.jpg";
-import team2 from "../../assets/img/team-2.jpg";
-import team3 from "../../assets/img/team-3.jpg";
+
 import TeamCard from "./TeamCard";
 const Teams = () => {
-  const teams = [
-    {
-      name: "FULL NAME",
-      role: "Designation",
-      img: team1,
-    },
-    {
-      name: "FULL NAME",
-      role: "Designation",
-      img: team2,
-    },
-    {
-      name: "FULL NAME",
-      role: "Designation",
-      img: team3,
-    },
-  ];
+ 
   return (
     <section className="section">
       <SectionTitle subTitle="Team Members" title="OUR MASTER CHEFS" />

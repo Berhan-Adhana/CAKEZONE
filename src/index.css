@@ -210,3 +210,9 @@
       rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   }
 }
+
+/* @layer utilities{
+  .list:nth-child(2n){
+    @apply trans
+  }
+} */
