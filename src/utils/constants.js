@@ -3,16 +3,16 @@ import { GiCoffeeCup } from "react-icons/gi";
 import { MdGroups2 } from "react-icons/md";
 import { FaAward, FaHeartbeat } from "react-icons/fa";
 
-import weddingCake from "../assets/img/cake-1.jpg";
-import birthdayCake from "../assets/img/cake-2.jpg";
-import customCake from "../assets/img/cake-3.jpg";
-import user1 from "../assets/img/testimonial-1.jpg";
-import user2 from "../assets/img/testimonial-2.jpg";
-import user3 from "../assets/img/testimonial-3.jpg";
-import user4 from "../assets/img/testimonial-4.jpg";
-import team1 from "../assets/img/team-1.jpg";
-import team2 from "../assets/img/team-2.jpg";
-import team3 from "../assets/img/team-3.jpg";
+import weddingCake from "/img/cake-1.jpg";
+import birthdayCake from "/img/cake-2.jpg";
+import customCake from "/img/cake-3.jpg";
+import user1 from "/img/testimonial-1.jpg";
+import user2 from "/img/testimonial-2.jpg";
+import user3 from "/img/testimonial-3.jpg";
+import user4 from "/img/testimonial-4.jpg";
+import team1 from "/img/team-1.jpg";
+import team2 from "/img/team-2.jpg";
+import team3 from "/img/team-3.jpg";
 
 export const cakes = [
   {
@@ -224,6 +224,29 @@ export const discounts = [
   {
     name: "CUSTOM CAKE",
     desc: "Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo amet tempor amet kasd lorem dolor ipsum",
+  },
+];
+
+export  const menuLinks = [
+  {
+    name: "Home",
+    linkTo: "/",
+  },
+  {
+    name: "ABout Us",
+    linkTo: "/about",
+  },
+  {
+    name: "Menu & Pricing",
+    linkTo: "/menu-pricing",
+  },
+  {
+    name: "Master Chefs",
+    linkTo: "/master-chefs",
+  },
+  {
+    name: "Contact Us",
+    linkTo: "/contact",
   },
 ];
 

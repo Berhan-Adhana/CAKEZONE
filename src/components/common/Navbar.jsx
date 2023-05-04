@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaBars } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { menuLinks } from "../../utils/constants";
 
 const Navbar = () => {
   const [isTop, setIsTop] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
-  console.log(isSticky);
+
+  console.log(isTop);
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 
   const handleMenuClicked = (event) => {
@@ -16,10 +17,6 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.screenY >= 35) {
-        setIsSticky(true);
-      } else setIsSticky(false);
-
       if (window.scrollY >= 70) {
         setIsTop(true);
       } else setIsTop(false);
@@ -28,31 +25,9 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   });
-  const menuLinks = [
-    {
-      name: "Home",
-      linkTo: "/",
-    },
-    {
-      name: "ABout Us",
-      linkTo: "/about",
-    },
-    {
-      name: "Menu & Pricing",
-      linkTo: "/menu-pricing",
-    },
-    {
-      name: "Master Chefs",
-      linkTo: "/master-chefs",
-    },
-    {
-      name: "Contact Us",
-      linkTo: "/contact",
-    },
-  ];
 
   return (
-    <div>
+    <>
       {/* Desktop */}
       <nav
         className={`hidden bg-dark lg:flex items-center gap-x-5 justify-center transition-[height] duration-500 ${
@@ -64,7 +39,7 @@ const Navbar = () => {
             key={index}
             initial={{ x: -50, y: 50, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: index * 0.5+ 1 }}
+            transition={{ duration: 1, delay: index * 0.5 + 1 }}
             viewport={{ once: true }}
           >
             <NavLink
@@ -91,7 +66,7 @@ const Navbar = () => {
       >
         <FaBars size={30} className="text-white " />
       </div>
-    </div>
+    </>
   );
 };
 
