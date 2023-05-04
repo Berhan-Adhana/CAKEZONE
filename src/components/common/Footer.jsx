@@ -6,7 +6,6 @@ import SocialMedia from "./SocialMedia";
 import { NavLink } from "react-router-dom";
 import { footerLinks } from "../../utils/constants";
 const Footer = () => {
-  
   return (
     <footer className="section common-bg">
       <div className="flex flex-col md:flex-row justify-between gap-x-8 items-center lg:items-start">
@@ -86,6 +85,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <p className="text-white pb-2 text-center">{`Copyright © ${new Date().getFullYear()} All Rights Reserved. By Berhan Adhana`}</p>
     </footer>
   );
 };
