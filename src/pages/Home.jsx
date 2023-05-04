@@ -1,6 +1,6 @@
 import AboutUs from "../components/about/AboutUs";
 import Stats from "../components/stat/Stats";
-import MenuAndPricing from "../components/menuandpricing/MenuAndPricing";
+import MenuAndPricingSection from "../components/menuandpricing/MenuAndPricingSection";
 import Discounts from "../components/discount/Discounts";
 import Teams from "../components/team/Teams";
 import Special from "../components/special/Special";
@@ -19,7 +19,7 @@ const Home = () => {
       {/* stats */}
       <Stats />
       {/* Menu and pricing */}
-      <MenuAndPricing />
+      <MenuAndPricingSection />
       {/* Discounts */}
       <Discounts />
       {/* Team Members*/}
