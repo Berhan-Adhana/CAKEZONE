@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { FaBars } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-
 
 const Navbar = () => {
   const [isTop, setIsTop] = useState(false);
@@ -60,13 +60,20 @@ const Navbar = () => {
         } z-[999999]  h-[87px]`}
       >
         {menuLinks.map((menu, index) => (
-          <NavLink
+          <motion.span
             key={index}
-            to={menu.linkTo}
-            className="uppercase text-[18px] font-oswald font-bold text-white hover:text-primary transition-all ease duration-700 block relative hover:after:content-[''] hover:after:absolute hover:after:bottom-0 overflow-hidden  after:w-0 after:h-[1px] after:bg-white after:left-[50%] hover:after:left-0 hover:after:w-full after:transition-all after:ease after:duration-500"
+            initial={{ x: -50, y: 50, opacity: 0 }}
+            whileInView={{ x: 0, y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: index * 0.5+ 1 }}
+            viewport={{ once: true }}
           >
-            {menu.name}
-          </NavLink>
+            <NavLink
+              to={menu.linkTo}
+              className="uppercase text-[18px] font-oswald font-bold text-white hover:text-primary transition-all ease duration-700 block relative hover:after:content-[''] hover:after:absolute hover:after:bottom-0 overflow-hidden  after:w-0 after:h-[1px] after:bg-white after:left-[50%] hover:after:left-0 hover:after:w-full after:transition-all after:ease after:duration-500"
+            >
+              {menu.name}
+            </NavLink>
+          </motion.span>
         ))}
       </nav>
       {/* Mobile and Tablet */}
