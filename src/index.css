@@ -193,20 +193,4 @@
     transform: translateY(14em);
     transition: opacity 300ms 200ms ease-in;
   }
-
-  .btn {
-    @apply py-4 px-12 text-white font-oswald font-bold relative before:absolute before:border-[1px] before:border-white  before:content-[''] before:top-2 before:left-2 before:right-2 before:bottom-2 transition-all duration-500;
-  }
-  .btn-primary {
-    @apply bg-primary hover:text-black;
-  }
-  .btn-dark {
-    @apply bg-dark hover:text-primary;
-  }
-  .btn:hover {
-    @apply scale-105 rounded-md;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  }
 }

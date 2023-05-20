@@ -1,8 +1,8 @@
 import { BsArrowRightShort } from "react-icons/bs";
 import { discounts } from "../../utils/constants";
+import Button from "../common/Button";
 
 const Discounts = () => {
- 
   return (
     <section className="common-bg mt-[200px]">
       <div className="section">
@@ -29,7 +29,7 @@ const Discounts = () => {
           <h1 className="text-white font-oswald">
             30% DISCOUNT FOR THIS SUMMER
           </h1>
-          <button className="btn btn-primary ">Order Now</button>
+          <Button primary>Order Now</Button>
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import Button from "../common/Button";
 import PlayButton from "./PlayButton";
 import { motion } from "framer-motion";
 
@@ -33,7 +34,7 @@ const Hero = () => {
           THE BEST CAKE IN LONDON
         </motion.h3>
         <div className="pt-12 flex gap-x-8">
-          <button className="btn btn-primary">Read More</button>
+          <Button primary>Read More</Button>
           <PlayButton />
         </div>
       </div>

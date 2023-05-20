@@ -1,3 +1,4 @@
+import Button from "../common/Button";
 import SectionTitle from "../common/SectionTitle";
 
 const Special = () => {
@@ -17,8 +18,8 @@ const Special = () => {
         </p>
 
         <div className="flex gap-x-6">
-          <button className="btn btn-primary ">Shop Now</button>
-          <button className="btn btn-dark">Read More</button>
+          <Button primary>Shop Now</Button>
+          <Button secondary>Read More</Button>
         </div>
       </div>
     </section>
